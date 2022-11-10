@@ -1,6 +1,6 @@
 import React, { createContext, useState,useEffect } from 'react'
 import useInterval from '../hooks/useInterval';
-import { statReg } from '../helpers/api';
+import { statReg,crec } from '../helpers/api';
 
 const CheemsContext = createContext()
 const Conmtext = ({children}) => {
@@ -26,7 +26,7 @@ const Conmtext = ({children}) => {
     useInterval(()=>{
       statReg(hungry,setHungry,10)
       statReg(sleep,setSleep,5);
-     
+      crec(amsiedad,age,setAge)
       setAmsiedad(Math.ceil((hungry+sleep+poop)/3))//Amsiedad Algorithm
     },time)
 

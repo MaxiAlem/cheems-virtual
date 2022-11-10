@@ -24,7 +24,9 @@ const Cheems = () => {
     <button onClick={()=>{setSleep(0)}}>dormir</button>
     <p> y tengo {poop} ganas de hacer caca </p>
     <button onClick={()=>{setPoop(0)}}>limpiar</button>
-    <p> y tengo {age} amños </p>
+    <p> y tengo {age.toFixed()} amños </p>
+    {/* con toFixed lo convertimos mostramos  el numero entero 
+    sin modificar con math.round peor loo vuelve string */}
     <p> y tengo {money} dimnero </p>
     <button onClick={()=>{reset()}}>reset</button>
     </div>
