@@ -9,6 +9,7 @@ const Conmtext = ({children}) => {
     const [amsiedad, setAmsiedad] = useState(0)
     const [sleep, setSleep] = useState(0)
     const [poop, setPoop] = useState(0)
+    const [wPoop, setWPoop]= useState(0)//ganas de hacer caca
     const [age, setAge] = useState(0)
     const [money,setMoney] = useState(0)
 
@@ -19,7 +20,8 @@ const Conmtext = ({children}) => {
         sleep,setSleep,
         poop,setPoop,
         age,setAge,
-        money,setMoney
+        money,setMoney,
+        wPoop, setWPoop
     }
 //stats por tiempo
     const time = 800
@@ -27,9 +29,12 @@ const Conmtext = ({children}) => {
       statReg(hungry,setHungry,10)
       statReg(sleep,setSleep,5);
       crec(amsiedad,age,setAge)
-      setAmsiedad(Math.ceil((hungry+sleep+poop)/3))//Amsiedad Algorithm
+      setAmsiedad(Math.ceil((hungry+sleep+(poop*20))/3))//Amsiedad Algorithm
     },time)
-
+    if(wPoop >= 100){
+      setWPoop(wPoop-100)
+      setPoop(poop+1)
+    }
 
     
   return (
