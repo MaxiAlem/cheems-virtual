@@ -24,12 +24,12 @@ const Conmtext = ({children}) => {
         wPoop, setWPoop
     }
 //stats por tiempo
-    const time = 800
+    const time = 2400
     useInterval(()=>{
       statReg(hungry,setHungry,10)
       statReg(sleep,setSleep,5);
       crec(amsiedad,age,setAge)
-      setAmsiedad(Math.ceil((hungry+sleep+(poop*20))/3))//Amsiedad Algorithm
+      setAmsiedad(Math.ceil((hungry+sleep+(poop*20))/2))//Amsiedad Algorithm
     },time)
     if(wPoop >= 100){
       setWPoop(wPoop-100)

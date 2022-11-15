@@ -15,11 +15,12 @@ const Cheems = () => {
         money,setMoney} = useContext(CheemsContext)
   
   return (
-    <div>
-    <img className='cheemsImg' src={cheems}/>  
+    <div className='screen'>
     <p> 🍖: {hungry},💤:{sleep},🚽:{wPoop}, 💩: {poop}  </p>
-    <p>  {age.toFixed()} amños. 💲  {money}  </p>
-     <p> {amsiedad} amsiedad, </p>
+    <img className='cheemsImg' src={cheems}/>  
+  
+    <p>  {age.toFixed()} Amños</p>
+     <p> {amsiedad} Amsiedad </p>
     {/* con toFixed lo convertimos mostramos  el numero entero 
     sin modificar con math.round peor loo vuelve string */}   
     </div>

@@ -5,19 +5,15 @@ import { CheemsContext } from './Conmtext'
 
 const Demvice = () => {
     const { hungry,setHungry,
-        amsiedad,setAmsiedad,
-        sleep,setSleep,
-        poop,setPoop,
-        wPoop, setWPoop,
-        age,setAge,
-        money,setMoney} = useContext(CheemsContext)
+      setSleep,setPoop,
+        wPoop, setWPoop} = useContext(CheemsContext)
     
-      const reset =()=>{
-        //reset 
-        setPoop(0)
-        setHungry(0)
-        setSleep(0)
-      }
+      // const reset =()=>{
+      //   //reset 
+      //   setPoop(0)
+      //   setHungry(0)
+      //   setSleep(0)
+      // }
 
       const eat=()=>{
         let comida = 10
@@ -26,14 +22,17 @@ const Demvice = () => {
       }
   return (
     <div className='demvice'>
+
+      <h1 className='title'>VirtualCheems</h1>
         <Cheems/>
 
         <div className='buttons'> 
-        <button onClick={()=>{eat()}}>comer</button>
-        <button onClick={()=>{setSleep(0)}}>dormir</button>
-        <button onClick={()=>{setPoop(0)}}>limpiar</button>
-        <button onClick={()=>{reset()}}>reset</button>
+        <div><p>comer</p><button onClick={()=>{eat()}}></button> </div>
+        <div><p>dormir</p><button onClick={()=>{setSleep(0)}}></button> </div>
+        <div><p>limpiar</p><button onClick={()=>{setPoop(0)}}></button> </div>
+        
         </div>
+        {/* <button onClick={()=>{reset()}}>reset</button> */}
     </div>
   )
 }
