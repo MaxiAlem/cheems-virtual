@@ -15,6 +15,9 @@ const statReg =(stat,setStat,mod)=>{
     
   }
 
+  const lvlCheems =(ams)=>{
+    if(ams >100 ){}
+  }
   export {
-    statReg,crec
+    statReg,crec,lvlCheems
   }
