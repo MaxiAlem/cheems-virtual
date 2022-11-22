@@ -13,12 +13,19 @@ const Cheems = () => {
       const imgCheems=()=>{
         return (<img className='cheemsImg' src={img+num()+'.jpg'}/>)  
       }
-      const  img ='../public/assets/'      
+      const  img ='../assets/'      
       const  num =()=>{
         if(amsiedad >100){
           return 'c9'
         }else {
-          return 'c0'
+          if(age <=3){
+            return 'c0'
+          }else if(age <= 10){
+            return 'c1'
+          }else {
+            return 'c2'
+          }
+          
         }
       }
   
