@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import Cheems from './cheems.jsx'
+import Cheems from './Cheems.jsx'
 import { CheemsContext } from './Conmtext'
 
 
